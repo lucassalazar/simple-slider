@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +35,6 @@
     }
   </style>
 </head>
-
 <body>
   <div wm-slider>
     <p>
@@ -62,49 +60,45 @@
     <p class="cidade"></p>
 
     <p>
-    	<img src="https://images.unsplash.com/photo-1552164587-8f7fe310e785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80" width="513" height="314">
+      <img
+        src="https://images.unsplash.com/photo-1552164587-8f7fe310e785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
+        width="513" height="314">
     </p>
   </div>
 </body>
-
 <script>
-  const wmslider = document.querySelector('[wm-slider]');
-
   const paragrafos = [];
 
   document.querySelectorAll('p').forEach(paragrafo => {
     paragrafos.push(paragrafo);
   });
 
-  let numParagrafos = 0;
+  let indiceParagrafos = 0;
 
-  let contador = 0;
+  const wmslider = document.querySelector('[wm-slider]');
 
-  let start = 0;
+  let start = wmslider.offsetWidth;
 
-  const finish = wmslider.offsetWidth;
+  const finish = 0;
 
-  const interval = 3;
+  const interval = 5;
 
-  window.addEventListener('load', () => {
-    contador = setInterval(move, 30);
-  })
+  setInterval(move, 30);
 
   function move() {
-    if (start >= finish) {
-      start = 0;
-      paragrafos[numParagrafos].style.display = 'none';
-      if (numParagrafos >= 5) {
-        numParagrafos = 0;
+    if (start < -520) {
+      start = wmslider.offsetWidth;
+      paragrafos[indiceParagrafos].style.display = 'none';
+      if (indiceParagrafos >= paragrafos.length - 1) {
+        indiceParagrafos = 0;
       } else {
-        numParagrafos++;
+        indiceParagrafos++;
       }
     } else {
-      paragrafos[numParagrafos].style.display = 'block';
-      start += interval;
-      paragrafos[numParagrafos].style.left = start + 'px';
+      paragrafos[indiceParagrafos].style.display = 'block';
+      start -= interval;
+      paragrafos[indiceParagrafos].style.left = start + 'px';
     }
   }
 </script>
-
 </html>
