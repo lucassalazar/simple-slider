@@ -1,0 +1,24 @@
+{
+  "name": "simple-slider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d slider.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucassalazar/simple-slider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucassalazar/simple-slider/issues"
+  },
+  "homepage": "https://lucassalazar.github.io/simple-slider"
+}
