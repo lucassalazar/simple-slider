@@ -1,64 +1,74 @@
-<div wm-slider>
-  <p>
-    <img
-      src="https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80"
-      width="513" height="342" alt="Computador em cima da Mesa" title="Computer by Joshua Aragon">
-  </p>
+<!DOCTYPE html>
+<html lang="en">
 
-  <p>
-    <img src="https://media3.giphy.com/media/yl3XErRq8qmmA/giphy.gif" alt="Matrix Gif" width="513" height="342">
-  </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Slider</title>
+  <style>
+    p {
+      position: absolute;
+      display: none;
+    }
 
-  <p class="circular">
-    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="imagem circular" height="342">
-  </p>
+    .circular {
+      width: 513px;
+      background-color: #444;
+    }
 
-  <p class="texto">
-    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="avatar" height="50" align="left">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi corporis nihil, doloremque dicta iste magnam
-    eaque enim eligendi cupiditate eos repudiandae. Mollitia tenetur repellat temporibus? Inventore odit in atque!
-  </p>
+    .texto {
+      width: 400px;
+    }
 
-  <p class="cidade"></p>
+    .texto img {
+      margin-right: 5px;
+    }
 
-  <p>
-    <picture>
-      <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width:600px)">
-      <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
-    </picture>
-  </p>
-</div>
+    .cidade {
+      width: 512px;
+      height: 342px;
+      background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 200%;
+      /*zoom*/
+    }
+  </style>
+</head>
 
+<body>
+  <div wm-slider>
+    <p>
+      <img
+        src="https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80"
+        width="513" height="342" alt="Computador em cima da Mesa" title="Computer by Joshua Aragon">
+    </p>
 
-<style>
-  p {
-    position: absolute;
-    display: none;
-  }
+    <p>
+      <img src="https://media3.giphy.com/media/yl3XErRq8qmmA/giphy.gif" alt="Matrix Gif" width="513" height="342">
+    </p>
 
-  .circular {
-    width: 513px;
-    background-color: #444;
-  }
+    <p class="circular">
+      <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="imagem circular" height="342">
+    </p>
 
-  .texto {
-    width: 400px;
-  }
+    <p class="texto">
+      <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="avatar" height="50" align="left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi corporis nihil, doloremque dicta iste magnam
+      eaque enim eligendi cupiditate eos repudiandae. Mollitia tenetur repellat temporibus? Inventore odit in atque!
+    </p>
 
-  .texto img {
-    margin-right: 5px;
-  }
+    <p class="cidade"></p>
 
-  .cidade {
-    width: 512px;
-    height: 342px;
-    background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 200%;
-    /*zoom*/
-  }
-</style>
+    <p>
+      <picture>
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width:600px)">
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+      </picture>
+    </p>
+  </div>
+</body>
 
 <script>
   const wmslider = document.querySelector('[wm-slider]');
@@ -99,3 +109,5 @@
     }
   }
 </script>
+
+</html>
