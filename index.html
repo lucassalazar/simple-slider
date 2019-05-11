@@ -86,7 +86,7 @@
   setInterval(move, 30);
 
   function move() {
-    if (start < -520) {
+    if (start < -paragrafos[indiceParagrafos].clientWidth) {
       start = wmslider.offsetWidth;
       paragrafos[indiceParagrafos].style.display = 'none';
       if (indiceParagrafos >= paragrafos.length - 1) {
